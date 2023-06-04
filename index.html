@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Gestor de Orçamento Pessoal</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <h1>Gestor de Orçamento Pessoal</h1>
+        <form>
+          <label for="saldo">Saldo em conta corrente:</label>
+          <input type="number" id="saldo" name="saldo" required>
+          <label for="tipo">Tipo:</label>
+          <select id="tipo" name="tipo" required>
+            <option value="receita">Receita</option>
+            <option value="despesa">Despesa</option>
+          </select>
+          <label for="descricao">Descrição:</label>
+          <input type="text" id="descricao" name="descricao" required>
+          <label for="data">Data (DD/MM/AAAA):</label>
+          <input type="text" id="data" name="data" placeholder="dd/mm/aaaa" required>
+           <label for="valor">Valor:</label>
+          <input type="number" id="valor" name="valor" required>
+          <button type="button" onclick="inserir()">Inserir</button>
+        </form>
+      </div>
+      <div class="list-container">
+        <h2>Lista de Transações</h2>
+        <ul id="lista-transacoes"></ul>
+        <p id="saldo-atual"></p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
